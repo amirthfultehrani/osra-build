@@ -1,0 +1,2 @@
+#!/bin/sh
+/opt/local/@PACKAGE_NAME@/@PACKAGE_VERSION@/osra-bin $*

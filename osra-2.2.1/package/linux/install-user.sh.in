@@ -1,0 +1,5 @@
+#!/bin/bash
+mkdir -p $HOME/@PACKAGE_NAME@/@PACKAGE_VERSION@ || { echo "Cannot create $HOME/@PACKAGE_NAME@ folder" 1>&2; exit; } 
+cp --remove-destination package/* $HOME/@PACKAGE_NAME@/@PACKAGE_VERSION@/ || { echo "Cannot copy to $HOME/@PACKAGE_NAME@ folder" 1>&2; exit; }
+echo "Installing binary files in $HOME/@PACKAGE_NAME@"
+

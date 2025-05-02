@@ -1,0 +1,16 @@
+--2025-05-02 03:04:08--  https://downloads.sourceforge.net/project/osra/osra/2.2.1/osra-2.2.1.tar.gz?ts=gAAAAABoFDYidqM4jyuC_kuQuAIqrziBKHs4FhU7liBkoIvQ9WgPDVU0t22V7iEUsfYjY9EiT62EAREz2F7N4LM4DG8CQYvYXw%3D%3D
+Resolving downloads.sourceforge.net (downloads.sourceforge.net)... 104.18.13.149, 104.18.12.149, 2606:4700::6812:d95, ...
+Connecting to downloads.sourceforge.net (downloads.sourceforge.net)|104.18.13.149|:443... connected.
+HTTP request sent, awaiting response... 302 Found
+Location: https://master.dl.sourceforge.net/project/osra/osra/2.2.1/osra-2.2.1.tar.gz?viasf=1 [following]
+--2025-05-02 03:04:09--  https://master.dl.sourceforge.net/project/osra/osra/2.2.1/osra-2.2.1.tar.gz?viasf=1
+Resolving master.dl.sourceforge.net (master.dl.sourceforge.net)... 216.105.38.12
+Connecting to master.dl.sourceforge.net (master.dl.sourceforge.net)|216.105.38.12|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 608639 (594K) [application/x-gzip]
+Saving to: ‘osra-2.2.1.tar.gz?ts=gAAAAABoFDYidqM4jyuC_kuQuAIqrziBKHs4FhU7liBkoIvQ9WgPDVU0t22V7iEUsfYjY9EiT62EAREz2F7N4LM4DG8CQYvYXw==’
+
+           osra-2.2.1.   0%[                           ]       0  --.-KB/s               osra-2.2.1.tar.gz?ts=g 100%[==========================>] 594.37K  --.-KB/s    in 0.06s   
+
+2025-05-02 03:04:09 (9.11 MB/s) - ‘osra-2.2.1.tar.gz?ts=gAAAAABoFDYidqM4jyuC_kuQuAIqrziBKHs4FhU7liBkoIvQ9WgPDVU0t22V7iEUsfYjY9EiT62EAREz2F7N4LM4DG8CQYvYXw==’ saved [608639/608639]
+

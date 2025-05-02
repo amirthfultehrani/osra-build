@@ -1,0 +1,10 @@
+prefix=@prefix@
+exec_prefix=@exec_prefix@
+
+Name: @PACKAGE_NAME@
+Description: Chemical structure recognition library
+Version: @PACKAGE_VERSION@
+
+Requires: gocr ocrad openbabel3 GraphicsMagick++
+Libs: -l@libdir@ @LIBS@
+Cflags: 

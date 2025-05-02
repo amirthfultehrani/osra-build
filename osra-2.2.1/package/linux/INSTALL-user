@@ -1,0 +1,7 @@
+To install run 
+./install.sh
+
+It will copy the contents of "package" into $HOME/osra
+
+Starting with version 2.1.0 Ghostscript is no longer necessary
+to process PDF and PS files.

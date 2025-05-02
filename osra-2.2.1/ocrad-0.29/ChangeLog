@@ -1,0 +1,261 @@
+2024-01-18  Antonio Diaz Diaz  <antonio@gnu.org>
+
+	* Version 0.29 released.
+	* Improve recognition of 'L' with right uptick.
+	* main.cc: Reformat file diagnostics as 'PROGRAM: FILE: MESSAGE'.
+	  (show_option_error): New function showing argument and option name.
+	  (open_outstream): Create missing intermediate directories.
+	* Rename verify_* to check_*.
+	* configure, Makefile.in: New variable 'MAKEINFO'.
+
+2022-01-17  Antonio Diaz Diaz  <antonio@gnu.org>
+
+	* Version 0.28 released.
+	* Add support for PNG images using libpng.
+	* configure: Set variables AR and ARFLAGS.
+	* main.cc: Set a valid invocation_name even if argc == 0.
+	* Don't derive Page_image and Textpage from Rectangle.
+	* New exception Ocrad::Internal.
+	* ocradlib.h: Define OCRAD_API_VERSION as 1000 * major + minor.
+	  (OCRAD_api_version): New function.
+	* ocradcheck.cc: Use Arg_parser.
+	* check.sh: Quote all file name variables to allow names with spaces.
+
+2019-01-10  Antonio Diaz Diaz  <antonio@gnu.org>
+
+	* Version 0.27 released.
+	* Fix a GCC warning about catching std::bad_alloc by value.
+	* main.cc (process_full_file): Check return value of fclose( infile ).
+	* configure: Accept appending to CXXFLAGS; 'CXXFLAGS+=OPTIONS'.
+
+2017-03-24  Antonio Diaz Diaz  <antonio@gnu.org>
+
+	* Version 0.26 released.
+	* main.cc (main): Don't use stdin more than once.
+	* configure: Avoid warning on some shells when testing for g++.
+	* Makefile.in: Detect the existence of install-info.
+
+2015-03-31  Antonio Diaz Diaz  <antonio@gnu.org>
+
+	* Version 0.25 released.
+	* New option '-E, --user-filter'.
+	* Improvements in character recognition.
+	* Recognize uppercase 'Y' with acute and 'Y' with diaeresis.
+	* textline_r2.cc: Recognize uppercase 'S' and 'Z' with caron.
+	* New filters 'text_block' and 'upper_num_mark'.
+	* ocrad.texi: New chapters 'Introduction' and 'Filters'.
+	* test.pbm: Add 11 new characters.
+	* Makefile.in: New targets 'install*-compress'.
+
+2014-10-03  Antonio Diaz Diaz  <antonio@gnu.org>
+
+	* Version 0.24 released.
+	* Improvements in character recognition.
+	* Allow more than one option '-e, --filter'.
+	* New filters 'same_height', 'upper_num', and 'upper_num_only'.
+	* New file histogram.h.
+	* ocrcheck.cc: Rename to ocradcheck.cc.
+	* ocrad.texi: Fix description of OCRAD_result_blocks.
+	* Change license to GPL version 2 or later.
+
+2014-03-10  Antonio Diaz Diaz  <antonio@gnu.org>
+
+	* Version 0.23 released.
+	* Improvements in character recognition.
+	* Filters of type '*_only' now remove leading whitespace.
+	* ocradlib.h: Change 'uint8_t' to 'unsigned char'.
+	* Add some missing inclusions of 'cstdlib'.
+	* ocrad.texinfo: Rename to ocrad.texi.
+
+2013-07-09  Antonio Diaz Diaz  <antonio@gnu.org>
+
+	* Version 0.22 released.
+	* Scaling and smoothing are now made before thresholding.
+	* Improvements in character recognition.
+	* ocradlib.h: New function OCRAD_set_utf8_format.
+	* Small improvements have been made in manual and man page.
+	* Change quote characters in messages as advised by GNU Standards.
+	* configure: Options now accept a separate argument.
+	* configure: Rename 'datadir' to 'datarootdir'.
+	* Makefile.in: New target 'install-bin'.
+
+2011-01-10  Antonio Diaz Diaz  <ant_diaz@teleline.es>
+
+	* Version 0.21 released.
+	* Fix some internal errors triggered by noisy input.
+	* ocrad.texinfo: New chapter 'OCR Results File'.
+	* main.cc: Set stdin/stdout in binary mode on MSVC and OS2.
+
+2010-07-16  Antonio Diaz Diaz  <ant_diaz@teleline.es>
+
+	* Version 0.20 released.
+	* ocradlib.h: New functions OCRAD_scale, OCRAD_result_chars_line,
+	  OCRAD_result_chars_block, and OCRAD_result_chars_total.
+
+2010-01-27  Antonio Diaz Diaz  <ant_diaz@teleline.es>
+
+	* Version 0.19 released.
+	* ocradlib.h: New library interface.
+	* ocradlib.cc, ocrcheck.cc: New files.
+	* Replace option '-p, --crop' with similar but different option
+	  '-u, --cut', which can accept coordinates taken from the ORF file.
+	* Fix recognition of files with a single character and without white
+	  space at the edges.
+	* check.sh: New tests for the library interface and for single
+	  character images.
+	* Makefile.in: Add option '--name' to help2man invocation.
+
+2009-05-08  Antonio Diaz Diaz  <ant_diaz@teleline.es>
+
+	* Version 0.18 released.
+	* Add a layout analyser able to process arbitrary pages.
+	* New option '-q, --quiet'.
+	* The option '--layout' no longer accepts an argument.
+	* The option '--crop' now accepts negative coordinates.
+	* New recognized letter; 'a' with ring above.
+	* Fix recognition on files with a single big character.
+	* Fix bug that didn't write maxval when saving pgm or ppm.
+	* Fix some includes that prevented compilation with GCC 4.3.0.
+	* 'make install-info' should now work on Debian and OS X.
+	* Makefile.in: Man page is now installed by default.
+	* New file testsuite/check.sh.
+	* Arg_parser updated to 1.2.
+	* Verbosity control of messages has been modified.
+
+2007-06-29  Antonio Diaz Diaz  <ant_diaz@teleline.es>
+
+	* Version 0.17 released.
+	* Update license to GPL version 3 or later.
+	* '--scale' no longer suppresses ORF output.
+	* Improve removal of thick frames.
+	* Change 'Textline' to accept more than one big initial.
+	* Class Rename 'Block' to 'Blob'.
+	* configure, Makefile.in: Make more GNU-standards compliant.
+
+2006-10-20  Antonio Diaz Diaz  <ant_diaz@teleline.es>
+
+	* Version 0.16 released.
+	* New option '-e, --filter'.
+	* Better algorithm for vertical space detection (blank lines).
+	* configure: Some fixes.
+	* Add two new debug levels.
+	* Improvements in character recognition.
+
+2006-04-03  Antonio Diaz Diaz  <ant_diaz@teleline.es>
+
+	* Version 0.15 released.
+	* New argument parser that replaces 'getopt_long'.
+	* Fix a bug that prevented compilation with GCC 4.1.
+
+2006-02-15  Antonio Diaz Diaz  <ant_diaz@teleline.es>
+
+	* Version 0.14 released.
+	* Ocrad is now able to read ppm files.
+	* New class 'Page_image' (256-level greymap).
+	* Add automatic and adaptive binarization by Otsu's method.
+	* New option '-p, --crop'.
+	* ocrad.texinfo: New chapters 'Image Format Conversion' and 'Algorithm'.
+	* Target 'check' added to Makefile.
+	* Change 'ocrad.png' icon to color, one line.
+
+2005-10-10  Antonio Diaz Diaz  <ant_diaz@teleline.es>
+
+	* Version 0.13 released.
+	* Ocrad is now able to read pgm files.
+	* New rational number class.
+	* Use rationals instead of integers in space detection algorithm.
+	* Better algorithm for space detection in tables.
+	* 'vector<bool>' replaced by 'vector<char>' in bitmap (faster).
+	* block.cc: Variable-size arrays replaced by vectors.
+	* main.cc, textpage.cc:
+	  Fix sizeof(size_t) != sizeof(int) on some 64 bit systems.
+	* Improve number recognition (mainly in textline_r2.cc).
+	* Overflow detection when loading or scaling file.
+	* Fix a miscompilation with GCC 3.3.1.
+	* Class 'Vrhomboid' merged into files 'track.h' and 'track.cc'.
+
+2005-06-07  Antonio Diaz Diaz  <ant_diaz@teleline.es>
+
+	* Version 0.12 released.
+	* Change in internal representation; Blockmap has been eliminated.
+	* Text inside tables of solid lines is now recognized.
+	* Improvements in character recognition.
+	* Fix possible integer overflow when loading pbm file.
+
+2005-02-12  Antonio Diaz Diaz  <ant_diaz@teleline.es>
+
+	* Version 0.11 released.
+	* New option '-s, --scale'.
+	* Improvements in character recognition.
+	* Fix bug in '--transform' (introduced in 0.10).
+
+2004-12-09  Antonio Diaz Diaz  <ant_diaz@teleline.es>
+
+	* Version 0.10 released.
+	* New suboption '-D7X'.
+	* Change in internal representation; only 1 Blockmap per Textpage.
+	* Use of absolute coordinates in ORF file.
+	* Improve space detection algorithm.
+	* Improvements in character recognition and separation.
+
+2004-10-23  Antonio Diaz Diaz  <ant_diaz@teleline.es>
+
+	* Version 0.9 released.
+	* New option '-t, --transform'.
+	* 'DESTDIR' now works as expected.
+	* New class 'Textpage' is top of internal representation.
+
+2004-05-23  Antonio Diaz Diaz  <ant_diaz@teleline.es>
+
+	* Version 0.8 released.
+	* Better algorithm for line detection.
+	* New feature '-x -' (export ORF file to stdout).
+	* Small improvements in picture elimination.
+
+2004-02-09  Antonio Diaz Diaz  <ant_diaz@teleline.es>
+
+	* Version 0.7 released.
+	* Internal change to UCS instead of ISO 8859-1.
+	* Default charset is now ISO 8859-15 (latin9).
+	* Ocrad now recognizes Turkish characters (ISO 8859-9).
+	* New output format (UTF-8).
+	* New options '-c, --charset' and '-F, --format'.
+	* ocrad.1: New man page.
+
+2003-12-18  Antonio Diaz Diaz  <ant_diaz@teleline.es>
+
+	* Version 0.6 released.
+	* configure: Fix compatibility with 'sh'.
+	* Better algorithm for lowercase-uppercase decision.
+	* Small changes to line detector.
+	* Fix bug (output of char 0 when separating some merged chars).
+
+2003-10-18  Antonio Diaz Diaz  <ant_diaz@teleline.es>
+
+	* Version 0.5 released.
+	* Fix bug when creating ORF file from stdin.
+	* Add the ability to read multiple files from stdin.
+	* Use 'vector' instead of 'list' due to problem with GCC 3.3.1.
+	* Faster 'processing' of pictures.
+
+2003-09-03  Antonio Diaz Diaz  <ant_diaz@teleline.es>
+
+	* Version 0.4 released.
+	* More standard configure and Makefile.
+	* ocrad.texinfo: New file.
+	* Small changes to layout detector.
+	* Character codes > 127 now in ISO_8859_1::<charname> format.
+	* New option '-i, --invert'.
+
+2003-07-19  Antonio Diaz Diaz  <ant_diaz@teleline.es>
+
+	* Version 0.3 released.
+	* ORF file feature added.
+	* Recursive 'layout detector' added.
+
+
+Copyright (C) 2003-2024 Antonio Diaz Diaz.
+
+This file is a collection of facts, and thus it is not copyrightable,
+but just in case, you have unlimited permission to copy, distribute, and
+modify it.
